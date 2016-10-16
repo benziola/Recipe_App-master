@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,7 +23,7 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            >
+            android:weightSum="1">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,6 +87,8 @@
                 android:textColor="#ffffff"
                 />
 
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -99,9 +102,9 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:inputType="textPassword"
+
                 android:layout_marginTop="35dp"
-                android:id="@+id/editUname"
+                android:id="@+id/editfname"
 
 
                 android:background="#ffffff" />
@@ -111,13 +114,13 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="28dp"
                 android:background="#ffffff"
-                android:id="@+id/passText" />
+                android:id="@+id/editlname" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="28dp"
-                android:id="@+id/editText"
+                android:id="@+id/edituname"
                 android:background="#ffffff"
                 android:layout_gravity="center_horizontal"
                 />
@@ -126,7 +129,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="28dp"
-                android:id="@+id/editText2"
+                android:id="@+id/editemail"
+
                 android:background="#ffffff"
                 android:layout_gravity="center_horizontal"
                 />
@@ -134,7 +138,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="28dp"
-                android:id="@+id/editText3"
+                android:id="@+id/editpass"
+                android:inputType="textPassword"
                 android:background="#ffffff"
                 android:layout_gravity="center_horizontal"
                 />
@@ -142,8 +147,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="28dp"
-                android:id="@+id/editText4"
+                android:id="@+id/editcpass"
                 android:background="#ffffff"
+                android:inputType="textPassword"
                 android:layout_gravity="center_horizontal"
                 />
 
@@ -151,13 +157,13 @@
                 android:layout_width="129dp"
                 android:layout_height="wrap_content"
                 android:text="Sign Up"
-                android:id="@+id/button"
+                android:id="@+id/btSign"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="28dp"
 
                 android:fadingEdge="horizontal|vertical"
-
                 android:clickable="true"
+                android:onClick="addAdmin"
                 android:translationZ="@dimen/abc_action_bar_content_inset_material"
                 />
         </LinearLayout>

@@ -1,9 +1,11 @@
 package com.example.danielmsibi.recipeapp;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by NWUUser on 2016/10/13.
@@ -18,7 +20,7 @@ public class Database extends SQLiteOpenHelper {
     private static final String COLUM_LNAME = "lname";
     private static final String COLUM_EMAIL = "email";
     private static final String COLUM_PASS = "pass";
-
+    private static final String COLUM_UNAME = "uname" ;
 
 
     SQLiteDatabase db;
@@ -67,5 +69,16 @@ public class Database extends SQLiteOpenHelper {
             }while (cursor.moveToNext());
         }
             return b;
+    }
+    public void addInformation(String name, String last_name,String user_name, String email, String password,SQLiteDatabase db )
+    {
+        ContentValues contentValues= new ContentValues();
+        contentValues.put(COLUM_FNAME,name);
+        contentValues.put(COLUM_LNAME,last_name);
+        contentValues.put(COLUM_UNAME,user_name);
+        contentValues.put(COLUM_EMAIL,email);
+        contentValues.put(COLUM_PASS,password);
+        db.insert(TABLE_NAME, null, contentValues);
+        Log.e("DATABASE OPERATIONS","One row inserted ...");
     }
 }
